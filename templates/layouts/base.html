@@ -1,0 +1,126 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+  <head>
+    <title>Carsharing</title>
+    <link rel="icon" href="{% static 'images/favicon.png' %}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+  </head>
+
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+    <div class="site-wrap" id="home-section">
+
+      <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+          </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+      </div>
+
+
+
+      <header class="site-navbar site-navbar-target" role="banner">
+
+        <div class="container">
+          <div class="row align-items-center position-relative">
+
+            <div class="col-3 ">
+              <div class="site-logo">
+                <a href="/">Carsharing</a>
+              </div>
+            </div>
+
+            <div class="col-9 text-right" style="left: 60px">
+
+
+              <span class="d-inline-block d-lg-none"><a href="#" class="text-white site-menu-toggle js-menu-toggle py-5 text-white"><span class="icon-menu h3 text-white"></span></a></span>
+
+
+
+              <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
+                <ul class="site-menu main-menu js-clone-nav ml-auto" style="font-size: 18px">
+                  <li class="active"><a href="/" class="nav-link">Головна</a></li>
+                  <select class="main-menu" style="background: none; border: none; color: white;">
+                    <option value="" style="display: none;">Регіон</option>
+                    <option value="" style="color: black;">Київ</option>
+                    <option value="" style="color: black;">Харків</option>
+                    <option value="" style="color: black;">Львів</option>
+                  </select>
+                  <li><a href="{% url 'cars' %}" class="nav-link">Автомобілі</a></li>
+                  <li><a href="{% url 'tariffs' %}" class="nav-link">Тарифи</a></li>
+                  <li><a href="{% url 'information' %}" class="nav-link">Інформація</a></li>
+                  <li><a href="{% url 'contacts' %}" class="nav-link">Контакти</a></li>
+                  <li><a href="{% url 'account' %}" class="nav-link">Акаунт</a></li>
+                  <li><a href="#">
+                    {% if not user.is_authenticated %}
+                      <img src="{% static 'images/logout.png' %}" alt="Image" class="img-fluid">
+                    {% else %}
+                      <img src="{% static 'images/login.png' %}" alt="Image" class="img-fluid">
+                    {% endif %}
+                  </a></li>
+                </ul>
+              </nav>
+            </div>
+
+
+          </div>
+        </div>
+
+      </header>
+
+
+{% block content %}
+{% endblock content %}
+
+    <footer class="site-footer" style="margin: auto; padding: 25px;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3">
+            <h2 class="footer-heading mb-4">Про нас</h2>
+                <p>Далеко далеко, за світовими горами, далеко від країн Вокалія і Консонантія, живуть сліпі тексти.</p>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+    </div>
+
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.sticky.js' %}"></script>
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+    <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
+    <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+    <script src="{% static 'js/bootstrap-datepicker.min.js' %}"></script>
+    <script src="{% static 'js/aos.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/register.js' %}"></script>
+
+  </body>
+
+</html>
+

@@ -1,0 +1,51 @@
+{% extends 'layouts/base.html' %}
+
+{% load static %}
+{% block content %}
+    <div class="ftco-blocks-cover-1">
+      <div class="ftco-cover-1 overlay innerpage" style="background-image: url('{% static 'images/hero_2.jpg' %}')">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-lg-6 text-center">
+              <h1>Акаунт</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section bg-light" id="contact-section">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+        <div class="col-7 text-center mb-5">
+          <h2>Введіть дані для реєстрації</h2>
+        </div>
+      </div>
+        <div class="row">
+          <div class="col-lg-12 mb-5" >
+            <form action="account/register">
+              <div class="form-group row">
+                <div class="col-md-5 mr-auto" style="margin: auto">
+                  <input type="submit" class="btn btn-block btn-primary text-white py-3 px-5" value="Зареєструватись">
+                </div>
+              </div>
+            </form>
+            <form action="/account/entry">
+              <div class="form-group row">
+                <div class="col-md-5 mr-auto" style="margin: auto">
+                  <input type="submit" class="btn btn-block btn-primary text-white py-3 px-5" value="Ввійти">
+                </div>
+              </div>
+            </form>
+            <form action="/account/logout">
+              <div class="form-group row">
+                <div class="col-md-5 mr-auto" style="margin: auto">
+                  <input type="submit" class="btn btn-block btn-primary text-white py-3 px-5" value="Вийти з акаунту">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock content %}

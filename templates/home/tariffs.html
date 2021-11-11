@@ -1,0 +1,65 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Тарифи{% endblock title %}
+
+{% block content %}
+{% load static %}
+
+    <div class="ftco-blocks-cover-1">
+      <div class="ftco-cover-1 overlay innerpage" style="background-image: url('{% static 'images/hero_2.jpg' %}')">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-lg-6 text-center">
+              <h1>Наші тарифи</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4 mb-lg-5">
+            <div class="service-1 dark">
+
+              <div class="service-1-contents">
+                <h3>Погодинний тариф</h3>
+                <p>Вклячає в себе вартість оренди авто за одну годину.</p>
+              </div>
+                <div class="text-center">
+                    <div class="rent-price"><span>₴150/</span>год</div>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4 mb-lg-5">
+            <div class="service-1 dark">
+
+              <div class="service-1-contents">
+                <h3>Покілометровий тариф</h3>
+                <p>Включає в себе вартість проїзду за один кілометр.</p>
+              </div>
+                <div class="text-center">
+                    <div class="rent-price"><span>₴10/</span>км</div>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4 mb-lg-5">
+            <div class="service-1 dark">
+
+              <div class="service-1-contents">
+                <h3>Добовий тариф</h3>
+                <p>Вклячає в себе вартість оренди авто за одну добу.</p>
+              </div>
+            <div class="text-center">
+                <div class="rent-price"><span>₴1500/</span>день</div>
+            </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+{% endblock content %}
