@@ -46,7 +46,7 @@
                     </li>
                   </ul>
                   <div class="d-flex action">
-                    <a href="contact.html" class="btn btn-primary">Орендувати</a>
+                    <a href="{% url 'contacts' %}" class="btn btn-primary">Орендувати</a>
                   </div>
                 </div>
               </div>
@@ -79,7 +79,7 @@
                     </li>
                   </ul>
                   <div class="d-flex action">
-                    <a href="contact.html" class="btn btn-primary">Орендувати</a>
+                    <a href="{% url 'contacts' %}" class="btn btn-primary">Орендувати</a>
                   </div>
                 </div>
             </div>
@@ -113,16 +113,51 @@
                     </li>
                   </ul>
                   <div class="d-flex action">
-                    <a href="contact.html" class="btn btn-primary">Орендувати</a>
+                    <a href="{% url 'contacts' %}" class="btn btn-primary">Орендувати</a>
                   </div>
                 </div>
               </div>
           </div>
 
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="item-1">
+              {% for p in car %}
+                <a href="#"><img src="/media/{{ p.picture }}" alt="Image" class="img-fluid"></a>
+                <div class="item-1-contents">
+                  <div class="text-center">
+                  <h3><a href="#">{{ p.title }}</a></h3>
+                  <div class="rent-price"><span></span></div>
+                  </div>
+                  <ul class="specs">
+                    <li>
+                      <span>Дверей</span>
+                      <span class="spec">{{ p.dor }}</span>
+                    </li>
+                    <li>
+                      <span>Кількість місць для сидіння</span>
+                      <span class="spec">{{ p.seat }}</span>
+                    </li>
+                    <li>
+                      <span>Коробка ппередач</span>
+                      <span class="spec">{{ p.transmission }}</span>
+                    </li>
+                    <li>
+                      <span>Об'єм двигуна</span>
+                      <span class="spec">{{ p.engine }} л</span>
+                    </li>
+                  </ul>
+                  <div class="d-flex action">
+                    <a href="{% url 'contacts' %}" class="btn btn-primary">Орендувати</a>
+                  </div>
+              {% endfor %}
+                </div>
+              </div>
+          </div>
+
           <div class="col-12">
-            <span class="p-3">1</span>
-            <a href="#" class="p-3">2</a>
-            <a href="#" class="p-3">3</a>
+              <span class="p-3">1</span>
+              <a href="#" class="p-3">2</a>
+              <a href="#" class="p-3">3</a>
           </div>
         </div>
       </div>

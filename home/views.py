@@ -20,7 +20,7 @@ def contacts(request):
         return render(request, 'home/contacts.html')
     elif request.method == 'POST':
         feedback = Feedback()
-        feedback.subject = request.POST.get('subject')
+        feedback.first_name = request.POST.get('first_name')
         feedback.second_name = request.POST.get('second_name')
         feedback.user_email = request.POST.get('email')
         feedback.message = request.POST.get('message')

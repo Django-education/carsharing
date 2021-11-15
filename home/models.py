@@ -9,13 +9,13 @@ class UserEmail(models.Model):
 
 
 class Feedback(models.Model):
-    subject = models.CharField(max_length=200, null=True)
+    first_name = models.CharField(max_length=200, null=True)
     second_name = models.CharField(max_length=200)
     user_email = models.CharField(max_length=200)
     message = models.TextField(max_length=1024)
 
     def __str__(self) -> str:
-        return str(self.subject)
+        return str(self.first_name)
 
 
 class Mailing(models.Model):
